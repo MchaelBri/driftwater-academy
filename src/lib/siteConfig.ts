@@ -7,6 +7,14 @@
  * ============================================================
  */
 
+/** Base path for GitHub Pages deployment. Change to "" for Vercel/custom domain. */
+export const basePath = "/driftwater-academy";
+
+/** Prepend basePath to static asset paths (images, etc.) */
+export function assetPath(path: string) {
+  return `${basePath}${path}`;
+}
+
 export const siteConfig = {
   // ── Branding ──────────────────────────────────────────────
   name: "Driftwater Academy",
@@ -30,10 +38,10 @@ export const siteConfig = {
   // ── Navigation ────────────────────────────────────────────
   navLinks: [
     { label: "Home", href: "/" },
-    { label: "Programs", href: "/#programs" },
-    { label: "About", href: "/#benefits" },
+    { label: "Programs", href: "/programs" },
+    { label: "About", href: "/about" },
     { label: "Testimonials", href: "/#testimonials" },
-    { label: "FAQ", href: "/#faq" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
   ],
 
@@ -76,6 +84,7 @@ export const siteConfig = {
       description:
         "Parent-child water introduction classes focusing on comfort, bonding, and basic water awareness in a warm, playful environment.",
       icon: "baby",
+      image: "/images/program-little-splashers.jpg",
     },
     {
       title: "Water Explorers",
@@ -83,6 +92,7 @@ export const siteConfig = {
       description:
         "Building independence in the water through guided play, floating basics, and beginner kick techniques.",
       icon: "star",
+      image: "/images/program-water-explorers.jpg",
     },
     {
       title: "Stroke Builders",
@@ -90,6 +100,7 @@ export const siteConfig = {
       description:
         "Developing proper stroke technique, breathing patterns, and endurance across freestyle and backstroke.",
       icon: "swim",
+      image: "/images/program-stroke-builders.jpg",
     },
     {
       title: "Wave Riders",
@@ -97,6 +108,7 @@ export const siteConfig = {
       description:
         "Advanced stroke refinement, diving fundamentals, and introduction to competitive swimming skills.",
       icon: "trophy",
+      image: "/images/program-wave-riders.jpg",
     },
     {
       title: "Adult Swimmers",
@@ -104,6 +116,7 @@ export const siteConfig = {
       description:
         "Whether you are learning for the first time or refining technique, our adult classes meet you where you are.",
       icon: "user",
+      image: "/images/program-adult-swimmers.jpg",
     },
     {
       title: "Private Lessons",
@@ -111,6 +124,7 @@ export const siteConfig = {
       description:
         "One-on-one instruction tailored to individual goals, pace, and comfort level for accelerated progress.",
       icon: "target",
+      image: "/images/program-little-splashers.jpg",
     },
   ],
 

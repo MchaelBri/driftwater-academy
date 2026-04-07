@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { siteConfig } from "@/lib/siteConfig";
+import { siteConfig, assetPath } from "@/lib/siteConfig";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
 const blogImages = [
-  { src: "/images/blog-water-safety.png", alt: "Child learning water safety in a swimming pool" },
-  { src: "/images/blog-progress.png", alt: "Young swimmer showing progress in swim lessons" },
-  { src: "/images/blog-water-fear.png", alt: "Parent and child building water confidence together" },
-  { src: "/images/blog-health.png", alt: "Swimming laps for health and fitness benefits" },
+  { src: assetPath("/images/blog-water-safety.png"), alt: "Child learning water safety in a swimming pool" },
+  { src: assetPath("/images/blog-progress.png"), alt: "Young swimmer showing progress in swim lessons" },
+  { src: assetPath("/images/blog-water-fear.png"), alt: "Parent and child building water confidence together" },
+  { src: assetPath("/images/blog-health.png"), alt: "Swimming laps for health and fitness benefits" },
 ];
 
 export default function BlogPreview() {
